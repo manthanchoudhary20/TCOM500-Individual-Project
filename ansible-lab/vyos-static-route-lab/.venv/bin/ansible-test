@@ -1,0 +1,7 @@
+#!/home/xanquisher/vyos-project/ansible/.venv/bin/python3
+import sys
+from ansible_test._util.target.cli.ansible_test_cli_stub import main
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())

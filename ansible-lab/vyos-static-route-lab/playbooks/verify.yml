@@ -1,0 +1,24 @@
+---
+- name: Verify routing state
+  hosts: routers
+  gather_facts: no
+  vars:
+    verify_phase: before   # override with -e verify_phase=after
+
+  tasks:
+    - name: Run 'show ip route'
+      ansible.builtin.command: "vyos-op-run show ip route"
+      register: route_out
+
+    - name: Ensure outputs directory for phase exists
+      ansible.builtin.file:
+        path: "/home/xanquisher/vyos-project/ansible/outputs/{{ verify_phase }}"
+        state: directory
+      delegate_to: localhost
+      run_once: true
+
+    - name: Save route output
+      ansible.builtin.copy:
+        dest: "/home/xanquisher/vyos-project/ansible/outputs/{{ verify_phase }}/{{ inventory_hostname }}_route.txt"
+        content: "{{ route_out.stdout }}"
+      delegate_to: localhost

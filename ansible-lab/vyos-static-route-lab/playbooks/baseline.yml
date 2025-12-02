@@ -1,0 +1,6 @@
+---
+- name: Apply Baseline
+  hosts: vyos
+  gather_facts: false
+  roles:
+    - role: ../roles/baseline

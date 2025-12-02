@@ -1,0 +1,74 @@
+version: "3.9"
+
+services:
+  ansible-r1-1:
+    image: vyos:lab
+    privileged: true
+    command: ["/sbin/init"]
+    volumes:
+      - /lib/modules:/lib/modules
+    networks:
+      ansible_mgmt:
+        ipv4_address: 172.30.0.11
+      ansible_net12: {}
+
+  ansible-r2-1:
+    image: vyos:lab
+    privileged: true
+    command: ["/sbin/init"]
+    volumes:
+      - /lib/modules:/lib/modules
+    networks:
+      ansible_mgmt:
+        ipv4_address: 172.30.0.12
+      ansible_net12: {}
+      ansible_net23: {}
+
+  ansible-r3-1:
+    image: vyos:lab
+    privileged: true
+    command: ["/sbin/init"]
+    volumes:
+      - /lib/modules:/lib/modules
+    networks:
+      ansible_mgmt:
+        ipv4_address: 172.30.0.13
+      ansible_net23: {}
+      ansible_net34: {}
+
+  ansible-r4-1:
+    image: vyos:lab
+    privileged: true
+    command: ["/sbin/init"]
+    volumes:
+      - /lib/modules:/lib/modules
+    networks:
+      ansible_mgmt:
+        ipv4_address: 172.30.0.14
+      ansible_net34: {}
+
+networks:
+  ansible_mgmt:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+
+  ansible_net12:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.12.0/29
+
+  ansible_net23:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.23.0/29
+
+  ansible_net34:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.34.0/29
+

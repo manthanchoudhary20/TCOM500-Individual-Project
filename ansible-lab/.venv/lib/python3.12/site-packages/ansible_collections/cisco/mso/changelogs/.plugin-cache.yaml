@@ -1,0 +1,669 @@
+objects:
+  role: {}
+plugins:
+  become: {}
+  cache: {}
+  callback: {}
+  cliconf: {}
+  connection: {}
+  filter: {}
+  httpapi:
+    mso:
+      description: MSO Ansible HTTPAPI Plugin.
+      name: mso
+      version_added: 1.2.0
+  inventory: {}
+  lookup: {}
+  module:
+    mso_backup:
+      description: Manages backups
+      name: mso_backup
+      namespace: ''
+      version_added: null
+    mso_backup_schedule:
+      description: Manages backup schedules
+      name: mso_backup_schedule
+      namespace: ''
+      version_added: null
+    mso_dhcp_option_policy:
+      description: Manage DHCP Option policies.
+      name: mso_dhcp_option_policy
+      namespace: ''
+      version_added: null
+    mso_dhcp_option_policy_option:
+      description: Manage DHCP options in a DHCP Option policy.
+      name: mso_dhcp_option_policy_option
+      namespace: ''
+      version_added: null
+    mso_dhcp_relay_policy:
+      description: Manage DHCP Relay policies.
+      name: mso_dhcp_relay_policy
+      namespace: ''
+      version_added: null
+    mso_dhcp_relay_policy_provider:
+      description: Manage DHCP providers in a DHCP Relay policy.
+      name: mso_dhcp_relay_policy_provider
+      namespace: ''
+      version_added: null
+    mso_label:
+      description: Manage labels
+      name: mso_label
+      namespace: ''
+      version_added: null
+    mso_remote_location:
+      description: Manages remote locations
+      name: mso_remote_location
+      namespace: ''
+      version_added: null
+    mso_rest:
+      description: Direct access to the Cisco MSO REST API
+      name: mso_rest
+      namespace: ''
+      version_added: null
+    mso_role:
+      description: Manage roles
+      name: mso_role
+      namespace: ''
+      version_added: null
+    mso_schema:
+      description: Manage schemas
+      name: mso_schema
+      namespace: ''
+      version_added: null
+    mso_schema_clone:
+      description: Clone schemas
+      name: mso_schema_clone
+      namespace: ''
+      version_added: null
+    mso_schema_site:
+      description: Manage sites in schemas
+      name: mso_schema_site
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp:
+      description: Manage site-local Application Network Profiles (ANPs) in schema
+        template
+      name: mso_schema_site_anp
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg:
+      description: Manage site-local Endpoint Groups (EPGs) in schema template
+      name: mso_schema_site_anp_epg
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg_bulk_staticport:
+      description: Manage site-local EPG static ports in bulk in schema template
+      name: mso_schema_site_anp_epg_bulk_staticport
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg_domain:
+      description: Manage site-local EPG domains in schema template
+      name: mso_schema_site_anp_epg_domain
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg_selector:
+      description: Manage site-local EPG selector in schema templates
+      name: mso_schema_site_anp_epg_selector
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg_staticleaf:
+      description: Manage site-local EPG static leafs in schema template
+      name: mso_schema_site_anp_epg_staticleaf
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg_staticport:
+      description: Manage site-local EPG static ports in schema template
+      name: mso_schema_site_anp_epg_staticport
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg_subnet:
+      description: Manage site-local EPG subnets in schema template
+      name: mso_schema_site_anp_epg_subnet
+      namespace: ''
+      version_added: null
+    mso_schema_site_anp_epg_useg_attribute:
+      description: Manage EPG Site uSeg Attributes in schema sites
+      name: mso_schema_site_anp_epg_useg_attribute
+      namespace: ''
+      version_added: null
+    mso_schema_site_bd:
+      description: Manage site-local Bridge Domains (BDs) in schema template
+      name: mso_schema_site_bd
+      namespace: ''
+      version_added: null
+    mso_schema_site_bd_l3out:
+      description: Manage site-local BD l3out's in schema template
+      name: mso_schema_site_bd_l3out
+      namespace: ''
+      version_added: null
+    mso_schema_site_bd_subnet:
+      description: Manage site-local BD subnets in schema template
+      name: mso_schema_site_bd_subnet
+      namespace: ''
+      version_added: null
+    mso_schema_site_contract_service_graph:
+      description: Manage the service graph association with a contract in schema
+        sites
+      name: mso_schema_site_contract_service_graph
+      namespace: ''
+      version_added: null
+    mso_schema_site_contract_service_graph_listener:
+      description: Manage the listener for Azure site contract service graph in schema
+        sites
+      name: mso_schema_site_contract_service_graph_listener
+      namespace: ''
+      version_added: null
+    mso_schema_site_external_epg:
+      description: Manage External EPG in schema of sites.
+      name: mso_schema_site_external_epg
+      namespace: ''
+      version_added: null
+    mso_schema_site_external_epg_selector:
+      description: Manage External EPG selector in schema of cloud sites
+      name: mso_schema_site_external_epg_selector
+      namespace: ''
+      version_added: null
+    mso_schema_site_l3out:
+      description: Manage site-local layer3 Out (L3Outs) in schema template
+      name: mso_schema_site_l3out
+      namespace: ''
+      version_added: null
+    mso_schema_site_service_graph:
+      description: Manage Service Graph in schema sites
+      name: mso_schema_site_service_graph
+      namespace: ''
+      version_added: null
+    mso_schema_site_vrf:
+      description: Manage site-local VRFs in schema template
+      name: mso_schema_site_vrf
+      namespace: ''
+      version_added: null
+    mso_schema_site_vrf_region:
+      description: Manage site-local VRF regions in schema template
+      name: mso_schema_site_vrf_region
+      namespace: ''
+      version_added: null
+    mso_schema_site_vrf_region_cidr:
+      description: Manage site-local VRF region CIDRs in schema template
+      name: mso_schema_site_vrf_region_cidr
+      namespace: ''
+      version_added: null
+    mso_schema_site_vrf_region_cidr_subnet:
+      description: Manage site-local VRF regions in schema template
+      name: mso_schema_site_vrf_region_cidr_subnet
+      namespace: ''
+      version_added: null
+    mso_schema_site_vrf_region_hub_network:
+      description: Manage site-local VRF region hub network in schema template
+      name: mso_schema_site_vrf_region_hub_network
+      namespace: ''
+      version_added: null
+    mso_schema_template:
+      description: Manage templates in schemas
+      name: mso_schema_template
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp:
+      description: Manage Application Network Profiles (ANPs) in schema templates
+      name: mso_schema_template_anp
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp_epg:
+      description: Manage Endpoint Groups (EPGs) in schema templates
+      name: mso_schema_template_anp_epg
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp_epg_annotation:
+      description: Manage EPG Annotations on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: mso_schema_template_anp_epg_annotation
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp_epg_contract:
+      description: Manage EPG contracts in schema templates
+      name: mso_schema_template_anp_epg_contract
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp_epg_intra_epg_contract:
+      description: Manage Intra-EPG Contract on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: mso_schema_template_anp_epg_intra_epg_contract
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp_epg_selector:
+      description: Manage EPG selector in schema templates
+      name: mso_schema_template_anp_epg_selector
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp_epg_subnet:
+      description: Manage EPG subnets in schema templates
+      name: mso_schema_template_anp_epg_subnet
+      namespace: ''
+      version_added: null
+    mso_schema_template_anp_epg_useg_attribute:
+      description: Manage EPG uSeg Attributes in schema templates
+      name: mso_schema_template_anp_epg_useg_attribute
+      namespace: ''
+      version_added: null
+    mso_schema_template_bd:
+      description: Manage Bridge Domains (BDs) in schema templates
+      name: mso_schema_template_bd
+      namespace: ''
+      version_added: null
+    mso_schema_template_bd_dhcp_policy:
+      description: Manage BD DHCP Policy in schema templates
+      name: mso_schema_template_bd_dhcp_policy
+      namespace: ''
+      version_added: null
+    mso_schema_template_bd_subnet:
+      description: Manage BD subnets in schema templates
+      name: mso_schema_template_bd_subnet
+      namespace: ''
+      version_added: null
+    mso_schema_template_clone:
+      description: Clone templates
+      name: mso_schema_template_clone
+      namespace: ''
+      version_added: null
+    mso_schema_template_contract_filter:
+      description: Manage contract filters in schema templates
+      name: mso_schema_template_contract_filter
+      namespace: ''
+      version_added: null
+    mso_schema_template_contract_service_graph:
+      description: Manage the service graph association with a contract in schema
+        template
+      name: mso_schema_template_contract_service_graph
+      namespace: ''
+      version_added: null
+    mso_schema_template_deploy:
+      description: Deploy schema templates to sites
+      name: mso_schema_template_deploy
+      namespace: ''
+      version_added: null
+    mso_schema_template_deploy_status:
+      description: Check query of objects before deployment to site
+      name: mso_schema_template_deploy_status
+      namespace: ''
+      version_added: null
+    mso_schema_template_external_epg:
+      description: Manage external EPGs in schema templates
+      name: mso_schema_template_external_epg
+      namespace: ''
+      version_added: null
+    mso_schema_template_external_epg_contract:
+      description: Manage Extrnal EPG contracts in schema templates
+      name: mso_schema_template_external_epg_contract
+      namespace: ''
+      version_added: 0.0.8
+    mso_schema_template_external_epg_selector:
+      description: Manage External EPG selector in schema templates
+      name: mso_schema_template_external_epg_selector
+      namespace: ''
+      version_added: null
+    mso_schema_template_external_epg_subnet:
+      description: Manage External EPG subnets in schema templates
+      name: mso_schema_template_external_epg_subnet
+      namespace: ''
+      version_added: 0.0.8
+    mso_schema_template_filter_entry:
+      description: Manage filter entries in schema templates
+      name: mso_schema_template_filter_entry
+      namespace: ''
+      version_added: null
+    mso_schema_template_l3out:
+      description: Manage l3outs in schema templates
+      name: mso_schema_template_l3out
+      namespace: ''
+      version_added: null
+    mso_schema_template_migrate:
+      description: Migrate Bridge Domains (BDs) and EPGs between templates
+      name: mso_schema_template_migrate
+      namespace: ''
+      version_added: null
+    mso_schema_template_service_graph:
+      description: Manage Service Graph in schema templates
+      name: mso_schema_template_service_graph
+      namespace: ''
+      version_added: null
+    mso_schema_template_vrf:
+      description: Manage VRFs in schema templates
+      name: mso_schema_template_vrf
+      namespace: ''
+      version_added: null
+    mso_schema_template_vrf_contract:
+      description: Manage vrf contracts in schema templates
+      name: mso_schema_template_vrf_contract
+      namespace: ''
+      version_added: 0.0.8
+    mso_schema_template_vrf_rp:
+      description: Manage VRF Rendezvous Points (RP) in schema templates.
+      name: mso_schema_template_vrf_rp
+      namespace: ''
+      version_added: null
+    mso_schema_validate:
+      description: Validate the schema before deploying it to site
+      name: mso_schema_validate
+      namespace: ''
+      version_added: 1.3.0
+    mso_service_node_type:
+      description: Manage Service Node Types
+      name: mso_service_node_type
+      namespace: ''
+      version_added: null
+    mso_site:
+      description: Manage sites
+      name: mso_site
+      namespace: ''
+      version_added: null
+    mso_tenant:
+      description: Manage tenants
+      name: mso_tenant
+      namespace: ''
+      version_added: null
+    mso_tenant_site:
+      description: Manage tenants with cloud sites.
+      name: mso_tenant_site
+      namespace: ''
+      version_added: null
+    mso_user:
+      description: Manage users
+      name: mso_user
+      namespace: ''
+      version_added: null
+    mso_version:
+      description: Get version of MSO
+      name: mso_version
+      namespace: ''
+      version_added: null
+    ndo_dhcp_option_policy:
+      description: Manage DHCP Option Policies on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_dhcp_option_policy
+      namespace: ''
+      version_added: null
+    ndo_dhcp_relay_policy:
+      description: Manage DHCP Relay Policies on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_dhcp_relay_policy
+      namespace: ''
+      version_added: null
+    ndo_fabric_span_session:
+      description: Manage Fabric SPAN Sessions on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_fabric_span_session
+      namespace: ''
+      version_added: 2.11.0
+    ndo_fabric_span_session_source:
+      description: Manage Fabric SPAN Sessions Source on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_fabric_span_session_source
+      namespace: ''
+      version_added: 2.11.0
+    ndo_fabric_span_session_source_filter:
+      description: Manage Fabric SPAN Sessions Source Filter on Cisco Nexus Dashboard
+        Orchestrator (NDO).
+      name: ndo_fabric_span_session_source_filter
+      namespace: ''
+      version_added: 2.11.0
+    ndo_fex_device:
+      description: Manage FEX Devices on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_fex_device
+      namespace: ''
+      version_added: null
+    ndo_interface_setting:
+      description: Manage Interface Policy Groups on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_interface_setting
+      namespace: ''
+      version_added: null
+    ndo_ipsla_monitoring_policy:
+      description: Manage IPSLA Monitoring Policies on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_ipsla_monitoring_policy
+      namespace: ''
+      version_added: null
+    ndo_ipsla_track_list:
+      description: Manage IPSLA Track Lists on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_ipsla_track_list
+      namespace: ''
+      version_added: null
+    ndo_l3_domain:
+      description: Manage L3 Domains on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_l3_domain
+      namespace: ''
+      version_added: null
+    ndo_l3out_annotation:
+      description: Manage L3Outs Annotation on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_l3out_annotation
+      namespace: ''
+      version_added: null
+    ndo_l3out_bgp_peer:
+      description: Manage L3Out BGP Peer on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_l3out_bgp_peer
+      namespace: ''
+      version_added: 2.11.0
+    ndo_l3out_interface_group_policy:
+      description: Manage L3Out Interface Group Policy on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_l3out_interface_group_policy
+      namespace: ''
+      version_added: null
+    ndo_l3out_interface_routing_policy:
+      description: Manage L3Out Interface Routing Policies on Cisco Nexus Dashboard
+        Orchestrator (NDO).
+      name: ndo_l3out_interface_routing_policy
+      namespace: ''
+      version_added: null
+    ndo_l3out_node_group_policy:
+      description: Manage L3Out Node Group Policy on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_l3out_node_group_policy
+      namespace: ''
+      version_added: null
+    ndo_l3out_node_routing_policy:
+      description: Manage L3Out Node Routing Policies on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_l3out_node_routing_policy
+      namespace: ''
+      version_added: null
+    ndo_l3out_node_static_route:
+      description: Manage L3Out Node Static Routes on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_l3out_node_static_route
+      namespace: ''
+      version_added: 2.11.0
+    ndo_l3out_node_static_route_next_hop:
+      description: Manage L3Out Node Static Route Next Hops on Cisco Nexus Dashboard
+        Orchestrator (NDO).
+      name: ndo_l3out_node_static_route_next_hop
+      namespace: ''
+      version_added: 2.11.0
+    ndo_l3out_routed_interface:
+      description: Manage L3Out Routed Interfaces on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_l3out_routed_interface
+      namespace: ''
+      version_added: 2.11.0
+    ndo_l3out_routed_sub_interface:
+      description: Manage L3Out Routed Sub-Interfaces on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_l3out_routed_sub_interface
+      namespace: ''
+      version_added: 2.11.0
+    ndo_l3out_template:
+      description: Manage L3Outs on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_l3out_template
+      namespace: ''
+      version_added: null
+    ndo_macsec_policy:
+      description: Manage MACsec Policies on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_macsec_policy
+      namespace: ''
+      version_added: null
+    ndo_mcp_global_policy:
+      description: Manage the MCP Global Policy in a Fabric Policy Template on Cisco
+        Nexus Dashboard Orchestrator (NDO).
+      name: ndo_mcp_global_policy
+      namespace: ''
+      version_added: null
+    ndo_node_profile:
+      description: Manage Node Profiles on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_node_profile
+      namespace: ''
+      version_added: null
+    ndo_node_setting:
+      description: Manage Fabric Policy Node Settings on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_node_setting
+      namespace: ''
+      version_added: null
+    ndo_ntp_policy:
+      description: Manage NTP Policies in Fabric Policy Templates on Cisco Nexus Dashboard
+        Orchestrator (NDO).
+      name: ndo_ntp_policy
+      namespace: ''
+      version_added: null
+    ndo_physical_domain:
+      description: Manage Physical Domains on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_physical_domain
+      namespace: ''
+      version_added: null
+    ndo_physical_interface:
+      description: Manage Physical Interfaces on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_physical_interface
+      namespace: ''
+      version_added: null
+    ndo_pod_profile:
+      description: Manage Pod Profiles on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_pod_profile
+      namespace: ''
+      version_added: 2.11.0
+    ndo_pod_settings:
+      description: Manage Pod Settings on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_pod_settings
+      namespace: ''
+      version_added: 2.11.0
+    ndo_port_channel_interface:
+      description: Manage Port Channel Interfaces on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_port_channel_interface
+      namespace: ''
+      version_added: null
+    ndo_ptp_policy:
+      description: Manage PTP Policies on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_ptp_policy
+      namespace: ''
+      version_added: null
+    ndo_ptp_policy_profiles:
+      description: Manage PTP Policy Profiles on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_ptp_policy_profiles
+      namespace: ''
+      version_added: null
+    ndo_qos_class_policy:
+      description: Manage QoS Class Policies on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_qos_class_policy
+      namespace: ''
+      version_added: 2.11.0
+    ndo_qos_dscp_cos_translation_policy:
+      description: Manage QoS DSCP CoS Translation Policies on Cisco Nexus Dashboard
+        Orchestrator (NDO).
+      name: ndo_qos_dscp_cos_translation_policy
+      namespace: ''
+      version_added: null
+    ndo_route_map_policy_multicast:
+      description: Manage Multicast Route Map Policies on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_route_map_policy_multicast
+      namespace: ''
+      version_added: null
+    ndo_schema_template_bd_dhcp_policy:
+      description: Manage BD DHCP Policies in schema templates
+      name: ndo_schema_template_bd_dhcp_policy
+      namespace: ''
+      version_added: null
+    ndo_schema_template_contract_service_chain:
+      description: Manage the Schema Template Contract Service Chaining workflow on
+        Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_schema_template_contract_service_chain
+      namespace: ''
+      version_added: 2.11.0
+    ndo_schema_template_deploy:
+      description: Deploy schema templates to sites for NDO v3.7 and higher
+      name: ndo_schema_template_deploy
+      namespace: ''
+      version_added: null
+    ndo_service_device_cluster:
+      description: Manage Service Device Clusters on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_service_device_cluster
+      namespace: ''
+      version_added: 2.11.0
+    ndo_synce_interface_policy:
+      description: Manage syncE Interface Policies on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_synce_interface_policy
+      namespace: ''
+      version_added: null
+    ndo_template:
+      description: Manage Templates on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_template
+      namespace: ''
+      version_added: null
+    ndo_tenant_bgp_peer_prefix_policy:
+      description: Manage BGP Peer Prefix Policies in Tenant Policy Templates on Cisco
+        Nexus Dashboard Orchestrator (NDO).
+      name: ndo_tenant_bgp_peer_prefix_policy
+      namespace: ''
+      version_added: null
+    ndo_tenant_custom_qos_policy:
+      description: Manage Custom QoS Policies in Tenant Policy Templates on Cisco
+        Nexus Dashboard Orchestrator (NDO).
+      name: ndo_tenant_custom_qos_policy
+      namespace: ''
+      version_added: null
+    ndo_tenant_igmp_interface_policy:
+      description: Manage Internet Group Management Protocol (IGMP) Interface Policies
+        in Tenant Policy Templates on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_tenant_igmp_interface_policy
+      namespace: ''
+      version_added: null
+    ndo_tenant_igmp_snooping_policy:
+      description: Manage Internet Group Management Protocol (IGMP) Snooping Policies
+        in Tenant Policy Templates on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_tenant_igmp_snooping_policy
+      namespace: ''
+      version_added: null
+    ndo_tenant_mld_snooping_policy:
+      description: Manage Multicast Listener Discovery (MLD) Snooping Policies in
+        Tenant Policy Templates on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_tenant_mld_snooping_policy
+      namespace: ''
+      version_added: null
+    ndo_tenant_span_session:
+      description: Manage Tenant SPAN Sessions on Cisco Nexus Dashboard Orchestrator
+        (NDO).
+      name: ndo_tenant_span_session
+      namespace: ''
+      version_added: 2.11.0
+    ndo_virtual_port_channel_interface:
+      description: Manage Virtual Port Channel Interfaces on Cisco Nexus Dashboard
+        Orchestrator (NDO).
+      name: ndo_virtual_port_channel_interface
+      namespace: ''
+      version_added: null
+    ndo_vlan_pool:
+      description: Manage VLAN Pools on Cisco Nexus Dashboard Orchestrator (NDO).
+      name: ndo_vlan_pool
+      namespace: ''
+      version_added: null
+  netconf: {}
+  shell: {}
+  strategy: {}
+  test: {}
+  vars: {}
+version: 2.11.0

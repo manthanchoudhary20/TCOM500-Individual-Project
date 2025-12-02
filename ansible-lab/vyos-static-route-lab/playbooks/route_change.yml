@@ -1,0 +1,8 @@
+---
+- name: Apply route change (new non-adjacent subnet)
+  hosts: routers
+  gather_facts: no
+  vars:
+    route_phase: change
+  roles:
+    - routes

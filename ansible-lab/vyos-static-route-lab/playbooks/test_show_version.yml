@@ -1,0 +1,13 @@
+---
+- name: Test VyOS connectivity via CLI
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+    - name: Run 'show version' through VyOS CLI
+      ansible.builtin.shell: "cli -c 'show version'"
+      register: result
+
+    - name: Print output
+      ansible.builtin.debug:
+        var: result.stdout_lines

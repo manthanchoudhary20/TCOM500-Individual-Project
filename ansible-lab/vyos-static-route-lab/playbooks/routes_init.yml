@@ -1,0 +1,8 @@
+---
+- name: Configure initial static routes
+  hosts: routers
+  gather_facts: no
+  vars:
+    route_phase: init
+  roles:
+    - routes

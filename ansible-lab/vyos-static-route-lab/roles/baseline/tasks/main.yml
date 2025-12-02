@@ -1,0 +1,11 @@
+---
+- name: Configure hostname and SSH
+  ansible.netcommon.cli_command:
+    command: |
+      configure
+      set system host-name {{ inventory_hostname }}
+      set service ssh port 22
+      commit
+      save
+      exit
+

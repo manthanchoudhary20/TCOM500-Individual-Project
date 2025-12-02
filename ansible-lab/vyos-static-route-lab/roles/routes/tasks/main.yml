@@ -1,0 +1,33 @@
+---
+- name: Include routers group vars explicitly
+  ansible.builtin.include_vars:
+    file: ../../group_vars/routers.yml
+    name: routers_vars
+
+- name: Select routes for this phase
+  ansible.builtin.set_fact:
+    this_phase_routes: >-
+      {{
+        (route_phase == 'init')
+        | ternary(routers_vars.routes_init[inventory_hostname] | default([]),
+                 routers_vars.routes_change[inventory_hostname] | default([]))
+      }}
+
+- name: Debug routes for this host
+  ansible.builtin.debug:
+    var: this_phase_routes
+
+- name: Build 'set protocols static route' commands
+  ansible.builtin.set_fact:
+    route_cmds: >-
+      {%- set cmds = [] -%}
+      {%- for r in this_phase_routes -%}
+      {%-   set _ = cmds.append('set protocols static route ' ~ r.dest ~ ' next-hop ' ~ r.next_hop) -%}
+      {%- endfor -%}
+      {{ cmds }}
+  when: this_phase_routes | length > 0
+
+- name: Push static routes via vyos-commands-to-config
+  ansible.builtin.shell: "echo '{{ item }}' | vyos-commands-to-config"
+  loop: "{{ route_cmds }}"
+  when: this_phase_routes | length > 0
