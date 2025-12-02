@@ -38,7 +38,7 @@ Controller requirements:
 
 Example setup on the control host(for someone cloning this repo):
 
-``` git clone https://github.com/https://github.com/Xanquisher/Network-Automation.git vyos-static-route-lab```
+``` git clone https://github.com/manthanchoudhary20/TCOM500-Individual-Project```
 ``` cd vyos-static-route-lab/ansible```
 ``` python3 -m venv venv```
 ``` source venv/bin/activate```
