@@ -11,6 +11,7 @@ The lab topology is:
         172.31.12.0/29 (r1–r2)
         172.31.23.0/29 (r2–r3)
         172.31.34.0/29 (r3–r4)
+<img width="602" height="221" alt="image" src="https://github.com/user-attachments/assets/3039dff9-6043-4a25-979e-774a9b4728be" />
 
 Key files in this repository:
 
