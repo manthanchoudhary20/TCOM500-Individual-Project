@@ -106,3 +106,8 @@ The routes_init.yml playbook installs static routes that provide baseline reacha
 
     Note: This lab uses a rolling VyOS Docker image whose vyos-op-run ping helper currently returns an internal error. For simplicity and reliability, routing validation in this lab is done via show ip route snapshots and Ansible logs, rather than automated ping/traceroute.
 
+Demo Video 
+https://github.com/user-attachments/assets/1643fa4c-5129-4b77-9637-3725e7a01f43
+
+
+
